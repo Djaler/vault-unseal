@@ -227,8 +227,8 @@ func readConfig(path string) error {
 		conf.MaxCheckInterval = conf.CheckInterval * time.Duration(2)
 	}
 
-	if len(conf.Nodes) < 3 {
-		return errors.New("not enough nodes in node list (must have at least 3!)")
+	if len(conf.Nodes) < 1 {
+		return errors.New("not enough nodes in node list (must have at least 1!)")
 	}
 
 	if len(conf.Tokens) < 1 {
